@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>炫酷抽奖系统</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow"></div>
+    <main class="app">
+      <header class="hero card">
+        <h1>🎉 炫酷抽奖系统</h1>
+        <p>支持奖项配置、名单导入、动画抽取、历史记录与一键重置。</p>
+      </header>
+
+      <section class="grid">
+        <article class="card panel">
+          <h2>奖项配置</h2>
+          <div class="row compact">
+            <input id="prizeName" type="text" placeholder="奖项名称，如：一等奖" />
+            <input id="prizeCount" type="number" min="1" value="1" />
+            <button id="addPrizeBtn" class="btn btn-primary">添加奖项</button>
+          </div>
+          <ul id="prizeList" class="list"></ul>
+        </article>
+
+        <article class="card panel">
+          <h2>参与者名单</h2>
+          <div class="row compact">
+            <textarea id="participantsInput" placeholder="每行一个姓名，也可粘贴编号+姓名"></textarea>
+          </div>
+          <div class="row">
+            <button id="importParticipantsBtn" class="btn">导入名单</button>
+            <button id="shuffleParticipantsBtn" class="btn">打乱顺序</button>
+            <button id="clearParticipantsBtn" class="btn btn-danger">清空名单</button>
+          </div>
+          <div class="stats" id="participantStats">当前参与者：0 人</div>
+        </article>
+
+        <article class="card panel draw-panel">
+          <h2>开始抽奖</h2>
+          <div class="row compact">
+            <select id="drawPrizeSelect"></select>
+            <button id="drawBtn" class="btn btn-primary">开始抽取</button>
+          </div>
+          <div id="lotteryScreen" class="lottery-screen">准备就绪</div>
+          <div class="winner-box">
+            <h3>中奖名单</h3>
+            <ol id="winnerList"></ol>
+          </div>
+        </article>
+
+        <article class="card panel">
+          <h2>抽奖记录</h2>
+          <ul id="historyList" class="list history"></ul>
+          <div class="row">
+            <button id="exportHistoryBtn" class="btn">导出记录 JSON</button>
+            <button id="resetAllBtn" class="btn btn-danger">重置系统</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <template id="prizeItemTemplate">
+      <li class="list-item">
+        <span class="meta"></span>
+        <button class="btn btn-small btn-danger remove">删除</button>
+      </li>
+    </template>
+
+    <canvas id="confettiCanvas"></canvas>
+    <script src="script.js"></script>
+  </body>
+</html>
