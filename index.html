@@ -2,87 +2,11 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=screen.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>炫酷抽奖系统 Pro</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>抽奖系统</title>
   </head>
   <body>
-    <div class="bg-glow"></div>
-    <main class="app">
-      <header class="hero card">
-        <h1>🎉 炫酷抽奖系统 Pro</h1>
-        <p>支持奖项配置、批量抽取、数据备份恢复、历史回退与大屏展示。</p>
-      </header>
-
-      <section class="grid">
-        <article class="card panel">
-          <h2>奖项配置</h2>
-          <div class="row compact">
-            <input id="prizeName" type="text" placeholder="奖项名称，如：一等奖" />
-            <input id="prizeCount" type="number" min="1" value="1" />
-            <button id="addPrizeBtn" class="btn btn-primary">添加奖项</button>
-          </div>
-          <ul id="prizeList" class="list"></ul>
-        </article>
-
-        <article class="card panel">
-          <h2>参与者名单</h2>
-          <div class="row compact">
-            <textarea id="participantsInput" placeholder="每行一个姓名，也可粘贴编号+姓名"></textarea>
-          </div>
-          <div class="row">
-            <button id="importParticipantsBtn" class="btn">导入名单</button>
-            <button id="shuffleParticipantsBtn" class="btn">打乱顺序</button>
-            <button id="clearParticipantsBtn" class="btn btn-danger">清空名单</button>
-          </div>
-          <div class="stats" id="participantStats">当前参与者：0 人</div>
-          <div class="subpanel">
-            <h3>剩余可抽名单</h3>
-            <ul id="remainingList" class="list small"></ul>
-          </div>
-        </article>
-
-        <article class="card panel draw-panel">
-          <h2>开始抽奖</h2>
-          <div class="row compact">
-            <select id="drawPrizeSelect"></select>
-            <input id="drawCount" type="number" min="1" value="1" />
-            <button id="drawBtn" class="btn btn-primary">开始抽取</button>
-          </div>
-          <small class="hint">批量抽取人数不会超过奖项剩余名额与剩余参与者数量。</small>
-          <div id="lotteryScreen" class="lottery-screen">准备就绪</div>
-          <div class="winner-box">
-            <h3>中奖名单</h3>
-            <ol id="winnerList"></ol>
-          </div>
-        </article>
-
-        <article class="card panel">
-          <h2>抽奖记录</h2>
-          <ul id="historyList" class="list history"></ul>
-          <div class="row">
-            <button id="undoLastBtn" class="btn">撤销上一次抽奖</button>
-            <button id="exportHistoryBtn" class="btn">导出记录 JSON</button>
-            <button id="exportAllBtn" class="btn">导出全部数据</button>
-            <label class="btn file-btn">
-              导入数据
-              <input id="importAllInput" type="file" accept="application/json" />
-            </label>
-            <button id="fullscreenBtn" class="btn">全屏模式</button>
-            <button id="resetAllBtn" class="btn btn-danger">重置系统</button>
-          </div>
-        </article>
-      </section>
-    </main>
-
-    <template id="prizeItemTemplate">
-      <li class="list-item">
-        <span class="meta"></span>
-        <button class="btn btn-small btn-danger remove">删除</button>
-      </li>
-    </template>
-
-    <canvas id="confettiCanvas"></canvas>
-    <script src="script.js"></script>
+    <p>正在跳转到 <a href="screen.html">抽奖大屏</a>...</p>
   </body>
 </html>

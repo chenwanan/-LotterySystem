@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>抽奖系统设置台</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-stage"></div>
+    <main class="settings-wrap">
+      <header class="topbar card">
+        <h1>⚙️ 抽奖系统设置台</h1>
+        <nav>
+          <a href="screen.html" class="btn btn-primary">进入大屏抽奖页</a>
+        </nav>
+      </header>
+
+      <section class="grid two">
+        <article class="card panel">
+          <h2>奖项设置</h2>
+          <div class="row compact">
+            <input id="prizeName" placeholder="奖项名称（如：一等奖）" />
+            <input id="prizeTotal" type="number" min="1" value="3" placeholder="总名额" />
+            <input id="prizeRound" type="number" min="1" value="1" placeholder="每轮抽取" />
+            <button id="addPrizeBtn" class="btn">添加</button>
+          </div>
+          <ul id="prizeList" class="list"></ul>
+        </article>
+
+        <article class="card panel">
+          <h2>人员名单设置</h2>
+          <textarea id="participantsInput" placeholder="每行一个姓名"></textarea>
+          <div class="row">
+            <button id="importBtn" class="btn">导入名单</button>
+            <button id="shuffleBtn" class="btn">打乱顺序</button>
+            <button id="clearBtn" class="btn btn-danger">清空名单</button>
+          </div>
+          <p id="stats" class="muted">当前人数：0</p>
+        </article>
+      </section>
+
+      <section class="card panel">
+        <h2>系统数据</h2>
+        <div class="row">
+          <button id="exportBtn" class="btn">导出备份</button>
+          <label class="btn file-btn">导入备份<input id="importFile" type="file" accept="application/json" /></label>
+          <button id="resetBtn" class="btn btn-danger">重置全部数据</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="common.js"></script>
+    <script src="settings.js"></script>
+  </body>
+</html>

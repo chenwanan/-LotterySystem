@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>抽奖大屏</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="screen-page">
+    <div class="bg-stage moving"></div>
+    <main class="screen-wrap">
+      <header class="screen-header">
+        <h1>🎊 抽奖大屏</h1>
+        <div class="row">
+          <a href="settings.html" class="btn">返回设置台</a>
+          <button id="fullscreenBtn" class="btn">全屏</button>
+        </div>
+      </header>
+
+      <section class="control card">
+        <div class="row compact">
+          <select id="prizeSelect"></select>
+          <div class="pill" id="quotaInfo">剩余名额：0</div>
+          <div class="pill" id="roundInfo">每轮抽取：0</div>
+        </div>
+        <div class="row">
+          <button id="startBtn" class="btn btn-primary">开始</button>
+          <button id="stopBtn" class="btn btn-danger" disabled>停止</button>
+        </div>
+      </section>
+
+      <section class="rolling card" id="rollingBox">准备就绪</section>
+
+      <section class="result card">
+        <h2>本轮中奖结果</h2>
+        <ul id="roundResult" class="winner-grid"></ul>
+      </section>
+    </main>
+
+    <canvas id="fxCanvas"></canvas>
+
+    <script src="common.js"></script>
+    <script src="screen.js"></script>
+  </body>
+</html>
