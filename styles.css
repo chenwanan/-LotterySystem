@@ -31,12 +31,8 @@ body {
 }
 
 @keyframes glowMove {
-  0% {
-    transform: translateX(-30%);
-  }
-  100% {
-    transform: translateX(30%);
-  }
+  0% { transform: translateX(-30%); }
+  100% { transform: translateX(30%); }
 }
 
 .app {
@@ -53,20 +49,9 @@ body {
   box-shadow: 0 16px 35px rgba(5, 10, 25, 0.5);
 }
 
-.hero {
-  padding: 1.2rem 1.4rem;
-  margin-bottom: 1rem;
-}
-
-.hero h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-.hero p {
-  margin: 0.45rem 0 0;
-  color: var(--muted);
-}
+.hero { padding: 1.2rem 1.4rem; margin-bottom: 1rem; }
+.hero h1 { margin: 0; font-size: 1.8rem; }
+.hero p { margin: 0.45rem 0 0; color: var(--muted); }
 
 .grid {
   display: grid;
@@ -74,14 +59,9 @@ body {
   gap: 1rem;
 }
 
-.panel {
-  padding: 1rem;
-}
-
-h2 {
-  margin-top: 0;
-  font-size: 1.1rem;
-}
+.panel { padding: 1rem; }
+h2 { margin-top: 0; font-size: 1.1rem; }
+h3 { margin: 0.2rem 0; font-size: 0.95rem; color: #cddaff; }
 
 .row {
   display: flex;
@@ -89,13 +69,9 @@ h2 {
   flex-wrap: wrap;
 }
 
-.row.compact {
-  flex-wrap: nowrap;
-}
+.row.compact { flex-wrap: nowrap; }
 
-input,
-select,
-textarea {
+input, select, textarea {
   width: 100%;
   border: 1px solid rgba(163, 185, 255, 0.35);
   background: rgba(4, 8, 20, 0.5);
@@ -104,10 +80,7 @@ textarea {
   padding: 0.65rem 0.75rem;
 }
 
-textarea {
-  min-height: 120px;
-  margin-bottom: 0.7rem;
-}
+textarea { min-height: 120px; margin-bottom: 0.7rem; }
 
 .btn {
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -119,40 +92,18 @@ textarea {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 0 0 2px rgba(111, 123, 255, 0.2);
-}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 0 0 2px rgba(111, 123, 255, 0.2); }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
 
-.btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  border: none;
-  font-weight: 700;
-}
+.btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); border: none; font-weight: 700; }
+.btn-danger { background: linear-gradient(135deg, #f04677, var(--danger)); border: none; }
+.btn-small { padding: 0.3rem 0.5rem; font-size: 0.85rem; }
 
-.btn-danger {
-  background: linear-gradient(135deg, #f04677, var(--danger));
-  border: none;
-}
+.file-btn input { display: none; }
 
-.btn-small {
-  padding: 0.3rem 0.5rem;
-  font-size: 0.85rem;
-}
-
-.stats,
-.list {
-  margin-top: 0.8rem;
-  color: var(--muted);
-}
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0.7rem 0;
-  max-height: 170px;
-  overflow: auto;
-}
+.stats, .list { margin-top: 0.8rem; color: var(--muted); }
+.list { list-style: none; padding: 0; margin: 0.7rem 0; max-height: 170px; overflow: auto; }
+.list.small { max-height: 120px; font-size: 0.86rem; }
 
 .list-item {
   display: flex;
@@ -163,9 +114,7 @@ textarea {
   gap: 0.8rem;
 }
 
-.draw-panel {
-  grid-row: span 2;
-}
+.draw-panel { grid-row: span 2; }
 
 .lottery-screen {
   margin-top: 0.9rem;
@@ -180,51 +129,23 @@ textarea {
   background: rgba(8, 15, 34, 0.45);
 }
 
-.lottery-screen.rolling {
-  animation: pulse 0.6s infinite;
-}
+.lottery-screen.rolling { animation: pulse 0.6s infinite; }
+.hint { color: var(--muted); display: inline-block; margin-top: 0.5rem; }
+.subpanel { margin-top: 0.9rem; }
 
 @keyframes pulse {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(101, 217, 255, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 0 9px rgba(101, 217, 255, 0.02);
-  }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(101, 217, 255, 0.2); }
+  50% { box-shadow: 0 0 0 9px rgba(101, 217, 255, 0.02); }
 }
 
-.winner-box h3 {
-  margin: 0.8rem 0 0.3rem;
-}
+.winner-box h3 { margin: 0.8rem 0 0.3rem; }
+#winnerList { margin: 0; padding-left: 1.2rem; color: #f3f7ff; line-height: 1.8; }
+.history li { font-size: 0.9rem; }
 
-#winnerList {
-  margin: 0;
-  padding-left: 1.2rem;
-  color: #f3f7ff;
-  line-height: 1.8;
-}
-
-.history li {
-  font-size: 0.9rem;
-}
-
-#confettiCanvas {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-}
+#confettiCanvas { position: fixed; inset: 0; pointer-events: none; }
 
 @media (max-width: 940px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .draw-panel {
-    grid-row: auto;
-  }
-
-  .row.compact {
-    flex-wrap: wrap;
-  }
+  .grid { grid-template-columns: 1fr; }
+  .draw-panel { grid-row: auto; }
+  .row.compact { flex-wrap: wrap; }
 }
